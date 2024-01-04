@@ -1,0 +1,233 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.try a{
+    color: black;
+    text-decoration: none;
+}
+.head{
+    display: inline;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.head h1{
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(121, 121, 121);
+    font-size: 6rem;
+    background-image: url(back.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: move 20s linear infinite;
+    text-shadow: 2px 2px 2px grey;
+}
+.head h3{
+    font-family: 'Lato', sans-serif;
+    color:rgb(61, 61, 61);
+}
+
+@keyframes move{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+.back_video{
+    position: absolute;
+    z-index: -10;
+    right: 0;
+    bottom: 0;
+}
+
+.menu{
+    list-style: none;
+    position: absolute;
+    margin-left: -48%;
+    color: white;
+    margin-top: -14%;
+}
+.menu li{
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.menu li i{
+    margin-top: 10%;
+    height: 3rem;
+    width: 3rem;
+    color: rgb(81, 81, 81);
+    animation: present 4s cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+.menu li i:nth-of-type(1){
+    animation-delay: 0s;
+}
+.menu li i:nth-of-type(2){
+    animation-delay: 1s;
+}
+.menu li i:nth-of-type(3){
+    animation-delay: 2s;
+}
+.menu li i:nth-of-type(4){
+    animation-delay: 3s;
+}
+
+.menu li i:hover{
+    color: black;
+}
+.menu li i:active{
+    transform: scale(0.9);
+}
+
+.try{
+    outline: none;
+    padding: 0.81%;
+    border-color: rgb(41, 41, 41);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    transition: 500ms;
+}
+.try:hover{
+    box-shadow: -3px -3px 10px grey;
+}
+
+.supported li{
+    list-style: none;
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    display: inline;
+    color: white;
+}
+
+.supported li i:nth-of-type(1){
+    left: 5%;
+    bottom: 1%;
+}
+.supported li i:nth-of-type(2){
+    left: 5%;
+    bottom: 1%;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back_video{
+    height: auto;
+    width: 100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back_video{
+    height: 100%;
+    width: auto;
+    }
+}
+
+@keyframes present{
+    100%{
+        transform: translateX(0);
+    }
+    0%{
+        transform: translateX(-150%);
+    }
+}
+
+.img img:nth-of-type(1){
+    position: absolute;
+    height: 50px;
+    margin-top: -15%;
+    right: 10%;
+    animation: revolve 20s linear infinite;
+}
+.img img:nth-of-type(2){
+    z-index: -10;
+    position: absolute;
+    height: 90px;
+    margin-top: 7%;
+    right: 15%;
+    animation: revolve 20s linear infinite;
+}
+
+@keyframes revolve{
+    100%{
+        transform: translateY(20%);
+    }
+    80%{
+        transform: translateX(20%);
+    }
+    60%{
+        transform: translateY(-20%);
+    }
+    40%{
+        transform: translateX(-20%);
+    }
+    20%{
+        transform: translateY(20%);
+    }
+    0%{
+        
+    }
+}
+
+.menu li:hover span{
+    visibility: visible;
+    opacity: 0.9;
+}
+.menu span{
+    background-color: grey;
+    border-radius: 5px;
+    padding: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.cursor {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  .outer {
+    border: 1px solid #f7f7f770;
+  }
+  
+  .inner {
+    background: #f7f7f720;
+    transition: 250ms ease-out;
+  }
+  
+  .cursor.hover {
+    transform: translate(-50%, -50%) scale(4);
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .inner.hover {
+    background: #f7f7f7;
+    mix-blend-mode: difference;
+  }

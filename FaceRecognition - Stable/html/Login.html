@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://kit.fontawesome.com/eb343b97c9.js" crossorigin="anonymous"></script>
+    <!--Use fontawesomecheatsheet.com for various icon source codes-->
+    <link rel="stylesheet" href="style_Login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="menu">
+            <li><i class="fa-solid fa-house-chimney fa-2xl"></i><span>Home</span></li>
+            <li><i class="fa-brands fa-servicestack fa-2xl"></i><span>Services</span></li>
+            <li><i class="fa-solid fa-circle-exclamation fa-2xl"></i><span>Help</span></li>
+            <li><i class="fa-solid fa-right-to-bracket fa-2xl"></i><span>SignUp</span></li>
+        </ul>
+    </nav>
+
+    <div class="circle">
+        <img src="an_cir.png">
+        <img src="an_cir.png">
+        <img src="an_cir.png">
+    </div>
+    <form>
+    <div class="container">
+        
+        <h1>Login</h1>
+
+        <div class="box">
+            <i class="fa fa-envelope"></i>
+            <input type="text" name="name" id="name" placeholder="Enter Your Username">
+        </div>
+
+        <div class="box">
+            <i class="fa fa-key"></i>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+        </div>
+
+        <div class="box1">
+            <input type="checkbox" name="File" id="remember_user" checked>
+            <label for="remember_user">Remember Me</label>
+        </div>
+
+        <button class="btn" onclick="func()"><span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span></button><!--google icon-->
+
+        <div class="box2">
+            <a href="#">Forgot Password?</a>
+        </div>    
+    </div>
+    </form>
+<script>
+    function func(){
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value
+        if(name == "Lakshay" && password ==="12345"){
+            alert("Logged In")
+            window.location.assign("./html/index.html")
+        }
+        else{
+            alert("Wrong Cresidentials")
+        }
+    }
+    
+</script>
+</body>
+</html>

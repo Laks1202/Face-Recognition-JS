@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(218, 218, 218);
+    background-image: url(login_back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    list-style: none;
+    position: absolute;
+    color: white;
+    left: 2.5%;
+    top: 27%;
+}
+.menu li{
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.menu li i{
+    height: 3rem;
+    width: 3rem;
+    color: rgb(69, 69, 69);
+    animation: present 4s cubic-bezier(0.22, 1, 0.36, 1) 1;
+}
+
+.menu li i:hover{
+    color: black;
+}
+
+
+.menu li i:active{
+    transform: scale(0.9);
+}
+@keyframes present{
+    100%{
+        transform: translateX(0);
+    }
+    0%{
+        transform: translateX(-150%);
+    }
+}
+
+.menu li:hover span{
+    visibility: visible;
+    opacity: 0.9;
+}
+.menu span{
+    background-color: grey;
+    border-radius: 5px;
+    padding: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(81, 81, 81);
+    width: 100vw;
+}
+
+.footer ul{
+    color: whitesmoke;
+    list-style: none;
+}
+
+.content {
+    background-color: none;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    box-shadow: 2px 2px 10px grey;
+}
+
+.container h1 {
+    font-family: 'Tektur', cursive;
+    margin-left: 35%;
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    margin-bottom: 15px;
+    padding: 13px 0;
+}
+
+.content h3{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 3px;
+    text-align: center;
+}
+.content p{
+    padding: 3px;
+}
+
+.circle img{
+    position: absolute;
+    height: 50px;
+    animation: revolve 20s ease-out infinite;
+}
+
+.circle img:nth-of-type(1){
+    height: 150px;
+    margin-left: 50%;
+}
+.circle img:nth-of-type(2){
+    height: 70px;
+    margin-left: 21%;
+}
+.circle img:nth-of-type(3){
+    margin-right: 480%;
+    margin-top: 4%;
+}
+
+@keyframes revolve{
+    100%{
+        transform: translateX(11%);
+        transform: translateY(1%);
+        transform: rotateX('45deg');
+    }
+    60%{
+        transform: translateY(30%);
+    }
+    30%{
+        transform: translateX(-20%);
+    }
+    0%{
+        transform: translateX(4%);
+        transform: translateY(0%);
+    }
+}
